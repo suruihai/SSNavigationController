@@ -4,7 +4,7 @@ Copy the files under folder 'Source' to your project and inherit your navigation
 @interface yourNavigationController : SSNavigationController
 
 
-# Adding to your project
+## Adding to your project
 ### Using CocoaPods
 Just add pod 'SSNavigationController' to your Podfile.
 
