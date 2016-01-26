@@ -70,21 +70,20 @@
     
     // start panning
     if (self.viewControllers.count >= 2 && sender.state == UIGestureRecognizerStateBegan) {
-        
-        if (self.beforeTransition) {
-            self.beforeTransition();
-        } else {
-            [self transitionStarted];
+        // panning right
+        if (translation.x > self.transitioningCriticalValue) {
+            if (self.beforeTransition) {
+                self.beforeTransition();
+            } else {
+                [self transitionStarted];
+            }
         }
     }
     
     // panning
     if (sender.state == UIGestureRecognizerStateChanged) {
         if (self.istransitioning) {
-            // panning right
-            if (translation.x > self.transitioningCriticalValue) {
-                [self transitioning:translation];
-            }
+            [self transitioning:translation];
         }
     }
     
@@ -124,12 +123,6 @@
     }
 }
 
-- (void)adjustOriginXOnView:(UIView *)view withValue:(CGFloat)x {
-    CGRect tempF = view.frame;
-    tempF.origin.x = x;
-    view.frame = tempF;
-}
-
 #pragma mark - TransitionMethods
 - (void)transitionStarted {
     
@@ -146,9 +139,16 @@
 
 - (void)transitioning:(CGPoint)translation {
 
-    [self adjustOriginXOnView:self.view withValue:translation.x];
+    CGRect presentF = self.view.frame;
+    presentF.origin.x = translation.x;
+    if (presentF.origin.x < 0) {
+        presentF.origin.x = 0;
+    }
+    self.view.frame = presentF;
     
-    [self adjustOriginXOnView:self.previousVc.view withValue:SS_PREVIOUS_VIEW_STARTING_POINT + translation.x * 0.5];
+    CGRect previousF = self.previousVc.view.frame;
+    previousF.origin.x = SS_PREVIOUS_VIEW_STARTING_POINT + translation.x * 0.5;
+    self.previousVc.view.frame = previousF;
 }
 
 - (void)transitionSuccess {

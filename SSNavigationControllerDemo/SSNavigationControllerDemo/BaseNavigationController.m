@@ -18,6 +18,7 @@
     [super viewDidLoad];
     
     self.navigationBar.barTintColor = [UIColor yellowColor];
+//    self.transitioningCriticalValue = 20;
 }
 
 - (void)didReceiveMemoryWarning {
