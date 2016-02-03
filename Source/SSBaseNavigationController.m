@@ -36,6 +36,7 @@
 @property (assign, nonatomic) CGPoint navTranslation;
 @property (strong, nonatomic) UIView *topView;
 @property (strong, nonatomic) UIPanGestureRecognizer *pan;
+@property (weak, nonatomic) UIWindow *keyWindow;
 @end
 
 @implementation SSBaseNavigationController
@@ -46,6 +47,11 @@
     self.interactivePopGestureRecognizer.enabled = NO;
 
     [self setupPanRecognizedAction];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.keyWindow = [UIApplication sharedApplication].keyWindow;
 }
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated {
@@ -71,7 +77,9 @@
     // start panning
     if (self.viewControllers.count >= 2 && sender.state == UIGestureRecognizerStateBegan) {
         // panning right
-        if (translation.x > self.transitioningCriticalValue) {
+        // use velocity.x here instead of translation.x due to a bug on iPhone-6S: translation.x = 0 when start panning on the left side of the screen
+        CGPoint velocity = [sender velocityInView:self.view];
+        if (velocity.x > self.transitioningCriticalValue) {
             if (self.beforeTransition) {
                 self.beforeTransition();
             } else {
@@ -218,7 +226,7 @@
 - (UIViewController *)previousVc {
     if (_previousVc == nil) {
         UIViewController *previousVc = self.viewControllers[self.viewControllers.count - 2];
-        [[UIApplication sharedApplication].keyWindow insertSubview:previousVc.view belowSubview:self.view];
+        [self.keyWindow insertSubview:previousVc.view belowSubview:self.view];
         previousVc.view.layer.opacity = self.previousViewOpacity ? self.previousViewOpacity : SS_PREVIOUS_VIEW_OPACITY;
         previousVc.view.userInteractionEnabled = NO;
         _previousVc = previousVc;
