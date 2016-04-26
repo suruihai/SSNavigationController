@@ -1,7 +1,7 @@
 # SSNavigationController
 This is a simple and light-weight framework for pan-to-right popViewController.
 Copy the files under folder 'Source' to your project and inherit your navigationController like this:
-@interface yourNavigationController : SSNavigationController
+@interface yourNavigationController : SSBaseNavigationController
 
 
 ## Adding to your project
