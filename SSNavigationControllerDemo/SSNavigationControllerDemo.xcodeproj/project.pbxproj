@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1004B9F61CCF13F40038C4B0 /* SSBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1004B9F31CCF13F30038C4B0 /* SSBaseNavigationController.m */; };
+		1004B9F71CCF13F40038C4B0 /* UIScrollView+AllowPanGestureEventPass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1004B9F51CCF13F30038C4B0 /* UIScrollView+AllowPanGestureEventPass.m */; };
 		944BDFA41C47826C00B1E88E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 944BDFA31C47826C00B1E88E /* main.m */; };
 		944BDFA71C47826C00B1E88E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 944BDFA61C47826C00B1E88E /* AppDelegate.m */; };
 		944BDFAF1C47826C00B1E88E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944BDFAE1C47826C00B1E88E /* Assets.xcassets */; };
 		944BDFB21C47826C00B1E88E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944BDFB01C47826C00B1E88E /* LaunchScreen.storyboard */; };
-		944BDFBB1C47830200B1E88E /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944BDFBA1C47830200B1E88E /* BaseNavigationController.m */; settings = {ASSET_TAGS = (); }; };
-		944BDFBE1C47831400B1E88E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944BDFBD1C47831400B1E88E /* FirstViewController.m */; settings = {ASSET_TAGS = (); }; };
-		944BDFC11C478E9000B1E88E /* SSNavigationController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944BDFBF1C478E7100B1E88E /* SSNavigationController.framework */; };
-		944BDFC21C478E9000B1E88E /* SSNavigationController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 944BDFBF1C478E7100B1E88E /* SSNavigationController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		944BDFBB1C47830200B1E88E /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944BDFBA1C47830200B1E88E /* BaseNavigationController.m */; };
+		944BDFBE1C47831400B1E88E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944BDFBD1C47831400B1E88E /* FirstViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				944BDFC21C478E9000B1E88E /* SSNavigationController.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,6 +31,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1004B9F21CCF13F30038C4B0 /* SSBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBaseNavigationController.h; sourceTree = "<group>"; };
+		1004B9F31CCF13F30038C4B0 /* SSBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSBaseNavigationController.m; sourceTree = "<group>"; };
+		1004B9F41CCF13F30038C4B0 /* UIScrollView+AllowPanGestureEventPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AllowPanGestureEventPass.h"; sourceTree = "<group>"; };
+		1004B9F51CCF13F30038C4B0 /* UIScrollView+AllowPanGestureEventPass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AllowPanGestureEventPass.m"; sourceTree = "<group>"; };
 		944BDF9F1C47826C00B1E88E /* SSNavigationControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSNavigationControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		944BDFA31C47826C00B1E88E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		944BDFA51C47826C00B1E88E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,7 +46,6 @@
 		944BDFBA1C47830200B1E88E /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		944BDFBC1C47831400B1E88E /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		944BDFBD1C47831400B1E88E /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		944BDFBF1C478E7100B1E88E /* SSNavigationController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SSNavigationController.framework; path = "../../../Library/Developer/Xcode/DerivedData/SSNavigationController-feisdtwbaqalgvfoyjffcksrjuvh/Build/Products/Debug-iphoneos/SSNavigationController.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +53,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				944BDFC11C478E9000B1E88E /* SSNavigationController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1004B9F11CCF13F30038C4B0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1004B9F21CCF13F30038C4B0 /* SSBaseNavigationController.h */,
+				1004B9F31CCF13F30038C4B0 /* SSBaseNavigationController.m */,
+				1004B9F41CCF13F30038C4B0 /* UIScrollView+AllowPanGestureEventPass.h */,
+				1004B9F51CCF13F30038C4B0 /* UIScrollView+AllowPanGestureEventPass.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		944BDF961C47826C00B1E88E = {
 			isa = PBXGroup;
 			children = (
-				944BDFBF1C478E7100B1E88E /* SSNavigationController.framework */,
 				944BDFA11C47826C00B1E88E /* SSNavigationControllerDemo */,
 				944BDFA01C47826C00B1E88E /* Products */,
 			);
@@ -95,6 +106,7 @@
 		944BDFA21C47826C00B1E88E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1004B9F11CCF13F30038C4B0 /* Source */,
 				944BDFA31C47826C00B1E88E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -170,6 +182,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1004B9F61CCF13F40038C4B0 /* SSBaseNavigationController.m in Sources */,
+				1004B9F71CCF13F40038C4B0 /* UIScrollView+AllowPanGestureEventPass.m in Sources */,
 				944BDFA71C47826C00B1E88E /* AppDelegate.m in Sources */,
 				944BDFA41C47826C00B1E88E /* main.m in Sources */,
 				944BDFBB1C47830200B1E88E /* BaseNavigationController.m in Sources */,
@@ -316,6 +330,7 @@
 				944BDFB81C47826C00B1E88E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

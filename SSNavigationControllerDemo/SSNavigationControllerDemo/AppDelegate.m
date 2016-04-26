@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <SSNavigationController/SSNavigationController.h>
 #import "BaseNavigationController.h"
 #import "FirstViewController.h"
 

@@ -6,7 +6,7 @@
 //  Copyright © 2016年 stevenSu. All rights reserved.
 //
 
-#import <SSNavigationController/SSNavigationController.h>
+#import "SSBaseNavigationController.h"
 
 @interface BaseNavigationController : SSBaseNavigationController
 
